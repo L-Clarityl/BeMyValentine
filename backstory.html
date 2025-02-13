@@ -1,0 +1,141 @@
+<!-- backstory page-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fflewis: Origin Story</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<style>
+    body {
+      font-family: 'Times New Roman', serif;
+      
+    }
+    h1 {
+        font-size: 120px;
+    }
+    h2 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    </style>
+    </head>
+    <body>
+        <button id="home-button" onclick="returnHome2()">🏠 Home</button>
+
+        <audio id="page-music" loop>
+            <source src="hobbit.mp3" type="audio/mpeg">
+        </audio>
+        
+    <h1 class="fire">FFLEWIS</h1>
+    <h2>The Origin Story</h2>
+    
+    <figure>
+        <img src="fflewis2.png" width="600" height="600" style="padding: 0;">
+
+    </figure>
+
+    <p style="font-size: 25px;">Once upon a time... long, long ago...(a while back...(like over a year...))</p>
+    <p>there lived a girl called Fflur and a boy called Lewis </p>
+    <p>(whom we shall refer hereafter as Lew).</p>
+    <figure>
+        <img src="fflur1.png" width="300" height="400" style="padding: 0;">
+    </figure>
+    <figure>
+        <img src="fflurgoof.png" width="300" height="400" style="padding: 0;">
+        <figcaption> Fig. 1 - Fflur </figcaption>
+    </figure>
+    
+    <figure>
+        <img src="lew1.png" width="300" height="400" style="padding: 0;">
+    </figure>
+    <figure>
+        <img src="lewgoof.png" width="300" height="400" style="padding: 0;">
+        <figcaption> Fig. 2 - Lew </figcaption>
+    </figure>
+
+    <p style="font-size: 25px;">And so...</p>
+    <p>Upon being overwhelmed by her striking beauty and evident Welsh heritage,</p>
+    <p>Lew took to her DMs in search of potential love...</p>
+    <figure>
+        <img src="journey.png" width="450" height="600" style="padding: 0;">
+
+    </figure>
+
+    <p>It was a journey of great anticipation.</p>
+    <p>Upon arrival at the mighty gates (opening the iOS keyboard),</p>
+    <p>Lew mustered up the courage to speak. And what he uttered next</p>
+    <p>changed the course of Lew and Fflur's history forever...</p>
+
+    <h2>"Very random question but I have to ask: are you welsh at all"</h2>
+    <h2>"That double L in your name might be a give away"</h2>
+
+    <p>Now, attentive reader, if you have but an eigth of the intelligence</p>
+    <p>of a plastic cup, you may have noticed that Lew had made a terrible mistake.</p>
+    <p>In the moment, it sort of felt like this: </p>
+
+    <figure>
+        <img src="tombstone.png" width="450" height="600" style="padding: 0;">
+        <figcaption>Fig 3. How it felt in the moment.</figcaption>
+    </figure>
+
+    <p>But all was not lost. Lew had made it this far and was not willing</p>
+    <p>to admit defeat. And so, Fflur and Lew begin chirping like birds on a</p>
+    <p>spring afternoon (texting a lot on iMessage), engaging in thrilling rounds</p>
+    <p>of virtual 8 ball, selectively missing classes to watch Traitors, and the like...</p>
+
+    <h3>A few months later...</h3>
+    <p>Now the 27th of January, Fflur and Lew find themselves in an awkwardly</p>
+    <p>romantic situation, as though fate were revealed through some strange</p>
+    <p>foreshadowing...</p>
+
+    <figure>
+        <img src="potnrice.jpg" width="450" height="600" style="padding: 0;">
+        <figcaption>Fig 3. How it felt in the moment.</figcaption>
+    </figure>
+
+    <p>The bright pink, the ambient lighting, the sensual music...</p>
+    <p>It was all too allusive.</p>
+    <p>Despite all odds, however, Fflur and Lew heartily enjoyed their meal.</p>
+    <p>A meal forever to be remembered...</p>
+
+    <h2>Months later...</h2>
+    <p>Lew confesses his feelings, in such a heartwarming way it is</p>
+    <p>no wonder Fflur reciprocated. The rough translation is as follows:</p>
+    <h2>"Don't deep this, but I think I might be slightly like maybe beginning</h2>
+    <h2>to sort of maybe kinda potentially like you."</h2>
+
+    <p>It's the confession a girl like Fflur girl could only dream of, probably.</p>
+
+    <p>And with that, Fflewis was born!</p>
+
+    
+
+    <script>
+        // Get the new audio element for this page
+        const audio = document.getElementById("page-music");
+    
+        function playMusic() {
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+        }
+    
+        // Play music on the first user interaction (fixes autoplay block)
+        document.addEventListener("click", () => {
+            if (audio.paused) {
+                playMusic(); // Start new music
+            }
+        }, { once: true });  // Ensures it only triggers on first click
+    </script>
+    
+    <script src="script.js"></script>
+
+</html>
