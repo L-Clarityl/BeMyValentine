@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="home-button" onclick="returnHome()">🏠 Home</button>
+
+    <!-- Background Music (Initially Paused Due to Autoplay Restrictions) -->
+    <audio id="bg-music" loop>
+        <source src="backgroundmusic.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="container">
+        <div id="image-container"></div>
+        <div id="text-container">
+            <div id="question">Fflur, will you be my valentine?</div>
+            <div id="options">
+                <button id="yes-button" onclick="playMusic(); selectOption('yes')">Yes</button>
+                <button id="no-button" onclick="playMusic(); selectOption('no')">No</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Button to Fateful Page -->
+    <button id="floating-button" onclick="goToPage()">The Fflewis Origin Story</button>
+
+    <script>
+        function goToPage() {
+            window.location.href = "backstory.html";
+        }
+    </script>
+    
+    <style>
+        #floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            font-size: 16px;
+            background-color: #ff5722; /* Orange */
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+    
+        #floating-button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+    
+    
+    <!-- play audio -->
+
+    <script>
+        const audio = document.getElementById("bg-music");
+
+        function playMusic() {
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+        }
+
+        // Play music on first user interaction (fixes autoplay issue)
+        document.addEventListener("click", () => {
+            if (audio.paused) {
+                playMusic();
+            }
+        }, { once: true });
+    </script>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+
+</body>
+</html>
